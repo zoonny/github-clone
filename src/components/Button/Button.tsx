@@ -12,6 +12,7 @@ const StyledDiv = styled.div`
   display: inline-flex;
   align-items: center;
   padding: 0 0.75rem;
+  margin-left: 0.5rem;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5; // 줄간격

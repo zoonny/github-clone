@@ -27,8 +27,15 @@ const StyledInput = styled.input`
   }
 `;
 
-function Input() {
-  return <StyledInput placeholder={"Search GitHub"} />;
+type InputProps = {
+  placeholder?: string;
+  style?: React.CSSProperties;
+  [x: string]: any;
+};
+
+function Input({ placeholder, style, x }: InputProps) {
+  return <StyledInput placeholder={placeholder} style={style} {...x} />;
+  // return <StyledInput placeholder={placeholder} style={{ fontSize: "14px" }} />;
 }
 
 export default Input;

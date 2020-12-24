@@ -8,7 +8,7 @@ type HeaderProps = {
 function Header({ children }: HeaderProps) {
   return (
     <header className="section">
-      <div className="inner">{children}</div>
+      <div className="inner clearfix">{children}</div>
     </header>
   );
 }
