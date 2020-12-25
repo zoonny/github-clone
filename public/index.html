@@ -51,4 +51,28 @@
   <body>
     <div id="root"></div>
   </body>
+  <script>
+    function initMap() {
+      const myLatLng = {
+        lat: 37.782293,
+        lng: -122.39124,
+      };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: myLatLng,
+        scrollwheel: false,
+        zoom: 18,
+      });
+      const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: "GitHub",
+      });
+    }
+  </script>
+  <!-- html 로드 완료 시 스크립트 실행  -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"
+    async
+    defer
+  ></script>
 </html>

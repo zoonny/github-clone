@@ -5,6 +5,7 @@ import Menu from "./sections/header/Menu";
 import Visual from "./sections/visual/Visual";
 import Feature from "./sections/feature/Feature";
 import Location from "./sections/location/Location";
+import Pricing from "./sections/pricing/Pricing";
 import Footer from "./sections/footer/Footer";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Visual />
         <Feature />
         <Location />
+        <Pricing />
         <Footer />
       </div>
     </>
