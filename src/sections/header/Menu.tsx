@@ -30,13 +30,22 @@ const SignGroup = styled.div`
   height: 100%;
   .btn-group {
     order: 2;
+    display: flex;
+    // not working
+    // &:nth-child(2) {
+    .btn--primary {
+      margin-left: 4px;
+    }
   }
-  .#search-form {
+  #search-form {
     order: 1;
+    margin-right: 10px;
   }
   .sub-menu {
+    // order: 0;
     display: flex;
     align-items: center;
+    margin-right: 10px;
     li a {
       padding: 8px;
       display: block;
@@ -47,11 +56,22 @@ const SignGroup = styled.div`
       }
     }
   }
+  #search-form > [type="submit"] {
+    display: none;
+  }
   // & .sub-menu li a {
   //   padding: 8px;
   //   display: block;
   //   font-size: 13px;
   //   color: #3c4146;
+  // }
+  // not working
+  // #search {
+  //   width: 160px;
+  //   font-size: 14px;
+  // }
+  // #search + [type="submit"] {
+  //   display: none;
   // }
 `;
 
@@ -76,6 +96,19 @@ function Menu() {
         </ul>
       </MenuGroup>
       <SignGroup className="float--right">
+        <div className="btn-group">
+          <Button>Sign in</Button>
+          <Button className="btn--primary">Sign up</Button>
+        </div>
+        <form id="search-form" method="POST" action="">
+          <Input
+            // not working
+            // id="search"
+            placeholder="Search GitHub"
+            style={{ width: "160px", fontSize: "14px" }}
+          />
+          <input type="submit" value="Submit" />
+        </form>
         <ul className="sub-menu">
           <li>
             <a href="#">Pricing</a>
@@ -87,17 +120,6 @@ function Menu() {
             <a href="#">Support</a>
           </li>
         </ul>
-        <div className="btn-group">
-          <Button>Sign in</Button>
-          <Button className="btn--primary">Sign up</Button>
-        </div>
-        <form id="search-form" method="POST" action="">
-          <Input
-            placeholder="Search GitHub"
-            style={{ width: "160px", fontSize: "14px" }}
-          />
-          <input type="submit" value="Submit" />
-        </form>
       </SignGroup>
     </>
   );

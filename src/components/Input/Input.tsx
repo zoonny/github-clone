@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledInput = styled.input`
-  height: 2rem;
-  padding: 0 0.5rem;
+  // height: 2rem;
+  height: ${(props) => props.height || "2rem"};
+  // background: ${(props) => props.height || "black"};
+  padding: 0 0.6rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
@@ -28,13 +30,32 @@ const StyledInput = styled.input`
 `;
 
 type InputProps = {
+  type?: string;
   placeholder?: string;
+  className?: string;
   style?: React.CSSProperties;
+  height?: string;
   [x: string]: any;
 };
 
-function Input({ placeholder, style, x }: InputProps) {
-  return <StyledInput placeholder={placeholder} style={style} {...x} />;
+function Input({ type, placeholder, className, style, height, x }: InputProps) {
+  // { type, placeholder, style, x }: InputProps,
+  // ...rest: any
+  // console.log(height, x, rest);
+  console.log(className);
+  return (
+    <StyledInput
+      type={type}
+      placeholder={placeholder}
+      className={className}
+      style={style}
+      height={height}
+      // not working
+      {...x}
+      // not working
+      // {...rest}
+    />
+  );
   // return <StyledInput placeholder={placeholder} style={{ fontSize: "14px" }} />;
 }
 

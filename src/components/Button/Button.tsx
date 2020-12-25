@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
   display: inline-flex;
   align-items: center;
   padding: 0 0.75rem;
-  margin-left: 0.5rem;
+  // margin-left: 4px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5; // 줄간격
@@ -40,6 +40,7 @@ const StyledDiv = styled.div`
 type ButtonProps = {
   /** 버튼의 내용 */
   children: React.ReactNode;
+  type?: string;
   className?: string;
   /** 클릭 시 호출할 함수 */
   onClick?:
@@ -47,7 +48,8 @@ type ButtonProps = {
     | undefined;
 };
 
-function Button({ children = "버튼", className, onClick }: ButtonProps) {
+// not working
+function Button({ children = "버튼", type, className, onClick }: ButtonProps) {
   return (
     <StyledDiv className={className} onClick={onClick}>
       {children}

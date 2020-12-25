@@ -5,8 +5,12 @@ header {
   /* height: auto; */
 }
 header .inner {
-  max-width: 980px;
-  height: 78px;
+  /* max-width: 980px; */
   /* 가운데 정렬, 위/아래 0, 왼쪽/오른쪽 auto - 단 width, max-width가 정의되어야 한다. */
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  height: 78px;
+}
+
+header .inner a {
+  text-decoration-line: none;
 }

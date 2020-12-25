@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
-import Button from "./components/Button/Button";
-import Input from "./components/Input/Input";
 import Header from "./sections/header/Header";
 import Menu from "./sections/header/Menu";
+import Visual from "./sections/visual/Visual";
+import Feature from "./sections/feature/Feature";
+import Location from "./sections/location/Location";
+import Footer from "./sections/footer/Footer";
 
 function App() {
   return (
@@ -12,11 +14,10 @@ function App() {
         <Header>
           <Menu />
         </Header>
-        {/* <Button>Hello world good job</Button>
-        <Button className="btn--primary">Primary</Button>
-        <Button>Hello</Button>
-        <Button>World</Button>
-        <Input /> */}
+        <Visual />
+        <Feature />
+        <Location />
+        <Footer />
       </div>
     </>
   );
