@@ -27,6 +27,11 @@ const StyledInput = styled.input`
   &::-moz-input-placeholder {
     color: #cacaca;
   }
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+  }
 `;
 
 type InputProps = {
@@ -42,7 +47,7 @@ function Input({ type, placeholder, className, style, height, x }: InputProps) {
   // { type, placeholder, style, x }: InputProps,
   // ...rest: any
   // console.log(height, x, rest);
-  console.log(className);
+  // console.log(className);
   return (
     <StyledInput
       type={type}
@@ -59,4 +64,4 @@ function Input({ type, placeholder, className, style, height, x }: InputProps) {
   // return <StyledInput placeholder={placeholder} style={{ fontSize: "14px" }} />;
 }
 
-export default Input;
+export default React.memo(Input);

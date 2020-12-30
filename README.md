@@ -50,3 +50,34 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 vscode format on save prettier not working
 
 > https://github.com/microsoft/vscode/issues/108447
+
+# Media Query
+
+- @media
+
+```css
+@media 미디어타입 and (미디어특성) {
+    css 코드
+}
+
+/* screen - 일반적인 화면 */
+/* max-width: 1200px 일때까지 color red 적용  */
+@media screen and (max-width: 1200px) {
+    body {
+        color: red;
+    }
+}
+```
+
+- 미디어타입
+  - all: 모든 미디어타입에 적용 (screen, print both), 기본값
+  - screen: 컴퓨터화면, 타블렛, 스마트폰 등
+  - print: 인쇄 전용
+- 미디어특성
+  - width
+  - max-width: 최대 가로너비 이하
+  - min-width: 최소 가로너비 이상
+  - height
+  - max-height: 최대 세로너비 이하
+  - min-height: 최소 세로너비 이상
+    orientation: 뷰포트 방향 (portrait: 세로가 긴 상태, landscape: 가로가 긴 상태)

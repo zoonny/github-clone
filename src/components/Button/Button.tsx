@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   // display: flex;
   // align-items: center;
   // justify-content: center;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0 0.75rem;
   // margin-left: 4px;
@@ -35,6 +35,9 @@ const StyledDiv = styled.div`
     color: #fff;
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
   }
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `;
 
 type ButtonProps = {
@@ -57,4 +60,4 @@ function Button({ children = "버튼", type, className, onClick }: ButtonProps) 
   );
 }
 
-export default Button;
+export default React.memo(Button);
