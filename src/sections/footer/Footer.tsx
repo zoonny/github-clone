@@ -38,12 +38,31 @@ const FooterSection = styled.footer`
       fill: #4078c0;
     }
   }
+
   @media (max-width: 1024px) {
     .inner {
       padding: 50px 20px;
     }
     .logo {
       display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .site-links {
+      float: none;
+      // justify-content: center;
+      display: block !important;
+      // &.float--right {
+      //   display: block;
+      // }
+      text-align: center;
+      li {
+        display: inline;
+      }
+      &:first-child {
+        margin-bottom: 20px;
+      }
     }
   }
 `;

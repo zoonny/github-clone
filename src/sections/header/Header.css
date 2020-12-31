@@ -14,24 +14,3 @@ header .inner {
 header .inner a {
   text-decoration-line: none;
 }
-
-/* @media screen and (max-width: 1024px) { */
-/* @media all and (max-width: 1024px) { */
-@media (max-width: 1024px) {
-  /* 선택자의 우선순위 */
-  /* 명시도 - tag 1, class 10 */
-  /* .section .inner에 선언 - 명시도 10+10 = 20 */
-  /* header .inner에 선언 - 명시도 1+10 = 11, 안바뀜 - 아래와 같이 변경 */
-  /* header .inner { */
-  header.section .inner {
-    max-width: none;
-    /* 햄버거 눌렀을때 늘어나므로 height도 초기화 */
-    height: auto;
-    padding: 0 20px;
-  }
-  /* 다중 선택자 */
-  /* header .menu-group,
-  header .sign-group {
-    float: none;
-  } */
-}

@@ -91,6 +91,15 @@ const SectionFeature = styled.section`
       }
     }
   }
+  @media (max-width: 768px) {
+    .tiles {
+      li {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5
+      }
+    }
+  }
 `;
 
 function Feature() {

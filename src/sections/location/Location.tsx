@@ -20,6 +20,21 @@ const LocationSection = styled.section`
       padding: 80px 20px 0 20px;
     }
   }
+
+  @media (max-width: 768px) {
+    .summary__title {
+      font-size: 34px !important;
+    }
+    .summary__description {
+      font-size: 22px;
+    }
+    #map {
+      width: auto;
+      margin: 40px -20px 0 -20px;
+      border-left: none;
+      border-right: none;
+    }
+  }
 `;
 
 function Location() {

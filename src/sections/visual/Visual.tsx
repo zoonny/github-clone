@@ -93,6 +93,14 @@ const Section = styled.section`
       margin: 0 auto;
     }
   }
+  @media screen and (max-width: 768px) {
+    .summary__title {
+      font-size: 34px !important;
+    }
+    .summary__description {
+      font-size: 22px;
+    }
+  }
 `;
 
 function Visual() {

@@ -44,6 +44,18 @@ const PricingSection = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .inner {
+      .card {
+        display: block;
+        .cell2 {
+          border-left: none;
+          border-top: 1px solid #e5e5e5;
+        }
+      }
+    }
+  }
 `;
 
 function Pricing() {
