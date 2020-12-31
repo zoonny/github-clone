@@ -75,6 +75,24 @@ const Section = styled.section`
       justify-content: center; // inline-flex
     }
   }
+  @media screen and (max-width: 1024px) {
+    backgroun-image: url("../img/bg-small.jpg");
+    .inner {
+      display: block;
+      max-width: none;
+      padding: 80px 20px;
+    }
+    .summary {
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+    #sign-form {
+      width: auto;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
 `;
 
 function Visual() {

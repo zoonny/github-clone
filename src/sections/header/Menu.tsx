@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
@@ -139,6 +139,19 @@ function Menu() {
   const onToggle = () => {
     setToggle(!toggle);
   };
+  const windowResize = () => {
+    console.log(window.innerHeight, window.innerWidth);
+    if (window.innerWidth > 1024) {
+      // off toggle element
+      setToggle(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", windowResize);
+    return () => {
+      window.removeEventListener("resize", windowResize);
+    };
+  }, []);
   return (
     <>
       <MenuGroup className="float--left">

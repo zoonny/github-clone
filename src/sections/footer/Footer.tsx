@@ -38,6 +38,14 @@ const FooterSection = styled.footer`
       fill: #4078c0;
     }
   }
+  @media (max-width: 1024px) {
+    .inner {
+      padding: 50px 20px;
+    }
+    .logo {
+      display: none;
+    }
+  }
 `;
 
 function Footer() {

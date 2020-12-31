@@ -74,6 +74,23 @@ const SectionFeature = styled.section`
       color: #767676;
     }
   }
+  @media (max-width: 1024px) {
+    .summary {
+      padding: 66px 20px 0 20px;
+    }
+    .tiles {
+      li {
+        width: 50%;
+        &:nth-child(2) {
+          border-right: none;
+        }
+        img {
+          padding: 14px 30% 24px;
+        }
+      }
+      }
+    }
+  }
 `;
 
 function Feature() {

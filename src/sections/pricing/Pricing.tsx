@@ -32,6 +32,18 @@ const PricingSection = styled.section`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .inner {
+      max-width: none;
+      padding: 80px 20px;
+      .card {
+        .cell2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 `;
 
 function Pricing() {

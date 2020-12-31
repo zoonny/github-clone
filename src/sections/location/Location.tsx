@@ -13,6 +13,13 @@ const LocationSection = styled.section`
     border-bottom: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
+
+  @media (max-width: 1024px) {
+    .inner {
+      max-width: none;
+      padding: 80px 20px 0 20px;
+    }
+  }
 `;
 
 function Location() {
